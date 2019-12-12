@@ -16,7 +16,7 @@
             android:layout_height="20dp"
             android:layout_alignBottom="@id/tv_title"
             android:layout_marginLeft="10dp"
-            android:background="@mipmap/ic_launcher" />
+            android:background="@mipmap/back" />
 
         <TextView
             android:id="@+id/tv_title"

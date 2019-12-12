@@ -79,20 +79,20 @@ public class DateAdapter extends BaseAdapter {
         final DateController dateController = new DateController(context);
         isCollect = dateController.getIsCollect(dairyInfoList.get(position).get_id(),dairyInfoList.get(position).getUser_id());
         if(isCollect){
-            viewHolder.iv_collect.setBackgroundResource(R.mipmap.ic_launcher_round);
+            viewHolder.iv_collect.setBackgroundResource(R.mipmap.collect_click);
         }else{
-            viewHolder.iv_collect.setBackgroundResource(R.mipmap.ic_launcher);
+            viewHolder.iv_collect.setBackgroundResource(R.mipmap.collect_unclick);
         }
         viewHolder.iv_collect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(isCollect){
-                    viewHolder.iv_collect.setBackgroundResource(R.mipmap.ic_launcher);
-                    dateController.addCollect(dairyInfoList.get(position).get_id(),dairyInfoList.get(position).getUser_id());
+                    viewHolder.iv_collect.setBackgroundResource(R.mipmap.collect_unclick);
+                    dateController.deleteCollect(dairyInfoList.get(position).get_id(),dairyInfoList.get(position).getUser_id());
                     isCollect = false;
                 }else{
-                    viewHolder.iv_collect.setBackgroundResource(R.mipmap.ic_launcher_round);
-                    dateController.deleteCollect(dairyInfoList.get(position).get_id(),dairyInfoList.get(position).getUser_id());
+                    viewHolder.iv_collect.setBackgroundResource(R.mipmap.collect_click);
+                    dateController.addCollect(dairyInfoList.get(position).get_id(),dairyInfoList.get(position).getUser_id());
                     isCollect = true;
                 }
             }

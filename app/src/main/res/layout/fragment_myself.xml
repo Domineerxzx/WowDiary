@@ -85,7 +85,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_centerVertical="true"
-                android:background="@mipmap/ic_launcher" />
+                android:background="@mipmap/order" />
 
             <TextView
                 android:id="@+id/tv_order"
@@ -104,7 +104,7 @@
                 android:layout_height="20dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:background="@mipmap/ic_launcher" />
+                android:background="@mipmap/next" />
         </RelativeLayout>
 
     </LinearLayout>
@@ -135,7 +135,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_centerVertical="true"
-                android:background="@mipmap/ic_launcher" />
+                android:background="@mipmap/collect" />
 
             <TextView
                 android:id="@+id/tv_collect"
@@ -154,7 +154,7 @@
                 android:layout_height="20dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:background="@mipmap/ic_launcher" />
+                android:background="@mipmap/next" />
         </RelativeLayout>
 
     </LinearLayout>
@@ -185,7 +185,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_centerVertical="true"
-                android:background="@mipmap/ic_launcher" />
+                android:background="@mipmap/about_us" />
 
             <TextView
                 android:id="@+id/tv_about_us"
@@ -204,7 +204,7 @@
                 android:layout_height="20dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:background="@mipmap/ic_launcher" />
+                android:background="@mipmap/next" />
         </RelativeLayout>
 
     </LinearLayout>
@@ -236,7 +236,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_centerVertical="true"
-                android:background="@mipmap/ic_launcher" />
+                android:background="@mipmap/setting" />
 
             <TextView
                 android:id="@+id/tv_setting"
@@ -255,7 +255,7 @@
                 android:layout_height="20dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:background="@mipmap/ic_launcher" />
+                android:background="@mipmap/next" />
         </RelativeLayout>
 
     </LinearLayout>
@@ -280,7 +280,7 @@
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="30dp"
-            android:background="@mipmap/ic_launcher"/>
+            android:background="@mipmap/close"/>
 
     </RelativeLayout>
 

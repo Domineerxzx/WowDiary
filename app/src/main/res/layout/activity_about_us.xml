@@ -15,7 +15,7 @@
             android:layout_height="20dp"
             android:layout_alignBottom="@id/tv_title"
             android:layout_marginLeft="20dp"
-            android:background="@mipmap/ic_launcher" />
+            android:background="@mipmap/back" />
 
         <TextView
             android:id="@+id/tv_title"
@@ -42,7 +42,7 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/rl_title"
         android:layout_marginTop="50dp"
-        android:background="@mipmap/ic_launcher"/>
+        android:background="@mipmap/eq"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -60,7 +60,7 @@
         android:layout_below="@id/tv_person_name"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:background="@mipmap/ic_launcher"/>
+        android:background="@mipmap/logo"/>
 
 
 

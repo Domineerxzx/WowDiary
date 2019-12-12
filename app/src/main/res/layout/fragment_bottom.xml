@@ -21,7 +21,7 @@
                 android:id="@+id/bt_date"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:background="@mipmap/ic_launcher" />
+                android:background="@mipmap/date_click" />
 
             <TextView
                 android:id="@+id/tv_date"
@@ -46,7 +46,7 @@
                 android:id="@+id/bt_my_dairy"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:background="@mipmap/ic_launcher_round" />
+                android:background="@mipmap/dairy_unclick" />
 
             <TextView
                 android:id="@+id/tv_my_dairy"
@@ -70,7 +70,7 @@
                 android:id="@+id/bt_issue"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:background="@mipmap/ic_launcher_round" />
+                android:background="@mipmap/issue_unclick" />
 
             <TextView
                 android:id="@+id/tv_issue"
@@ -94,7 +94,7 @@
                 android:id="@+id/bt_shopping"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:background="@mipmap/ic_launcher_round" />
+                android:background="@mipmap/shopping_unclick" />
 
             <TextView
                 android:id="@+id/tv_shopping"
@@ -118,7 +118,7 @@
                 android:id="@+id/bt_myself"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:background="@mipmap/ic_launcher_round" />
+                android:background="@mipmap/myself_unclick" />
 
             <TextView
                 android:id="@+id/tv_myself"

@@ -12,12 +12,12 @@ import com.domineer.triplebro.wowdiary.R;
 
 public class ShoppingFragment extends Fragment {
 
-    private View fragment_loves;
+    private View fragment_shopping;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        fragment_loves = inflater.inflate(R.layout.fragment_shopping, null);
-        return fragment_loves;
+        fragment_shopping = inflater.inflate(R.layout.fragment_shopping, null);
+        return fragment_shopping;
     }
 }

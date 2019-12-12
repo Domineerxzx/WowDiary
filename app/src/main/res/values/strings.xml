@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">WowDiary</string>
+    <string name="app_name">Wow日记</string>
     <string name="register_tip"><![CDATA[<<< 向右滑动进行登录]]></string>
     <string name="login_tip"><![CDATA[向左滑动进行注册 >>>]]></string>
 

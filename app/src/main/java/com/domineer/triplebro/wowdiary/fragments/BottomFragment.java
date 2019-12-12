@@ -161,36 +161,36 @@ public class BottomFragment extends Fragment implements View.OnClickListener {
     private void changeImageForButton(Button lastFunctionButton, Button onClickButton) {
         switch (lastFunctionButton.getId()) {
             case R.id.bt_date:
-                lastFunctionButton.setBackgroundResource(R.mipmap.ic_launcher_round);
+                lastFunctionButton.setBackgroundResource(R.mipmap.date_unclick);
                 break;
             case R.id.bt_my_dairy:
-                lastFunctionButton.setBackgroundResource(R.mipmap.ic_launcher_round);
+                lastFunctionButton.setBackgroundResource(R.mipmap.dairy_unclick);
                 break;
             case R.id.bt_issue:
-                lastFunctionButton.setBackgroundResource(R.mipmap.ic_launcher_round);
+                lastFunctionButton.setBackgroundResource(R.mipmap.issue_unclick);
                 break;
             case R.id.bt_shopping:
-                lastFunctionButton.setBackgroundResource(R.mipmap.ic_launcher_round);
+                lastFunctionButton.setBackgroundResource(R.mipmap.shopping_unclick);
                 break;
             case R.id.bt_myself:
-                lastFunctionButton.setBackgroundResource(R.mipmap.ic_launcher_round);
+                lastFunctionButton.setBackgroundResource(R.mipmap.myself_unclick);
                 break;
         }
         switch (onClickButton.getId()) {
             case R.id.bt_date:
-                onClickButton.setBackgroundResource(R.mipmap.ic_launcher);
+                onClickButton.setBackgroundResource(R.mipmap.date_click);
                 break;
             case R.id.bt_my_dairy:
-                onClickButton.setBackgroundResource(R.mipmap.ic_launcher);
+                onClickButton.setBackgroundResource(R.mipmap.dairy_click);
                 break;
             case R.id.bt_issue:
-                onClickButton.setBackgroundResource(R.mipmap.ic_launcher);
+                onClickButton.setBackgroundResource(R.mipmap.issue_click);
                 break;
             case R.id.bt_shopping:
-                onClickButton.setBackgroundResource(R.mipmap.ic_launcher);
+                onClickButton.setBackgroundResource(R.mipmap.shopping_click);
                 break;
             case R.id.bt_myself:
-                onClickButton.setBackgroundResource(R.mipmap.ic_launcher);
+                onClickButton.setBackgroundResource(R.mipmap.myself_click);
                 break;
         }
     this.lastFunctionButton =onClickButton;
