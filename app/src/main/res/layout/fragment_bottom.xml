@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/ll_date"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/bt_date"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="日历"
+                android:textColor="#000"
+                android:textSize="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/ll_my_dairy"
+            >
+
+            <Button
+                android:id="@+id/bt_my_dairy"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@mipmap/ic_launcher_round" />
+
+            <TextView
+                android:id="@+id/tv_my_dairy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="日记"
+                android:textColor="#888"
+                android:textSize="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/ll_issue">
+
+            <Button
+                android:id="@+id/bt_issue"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@mipmap/ic_launcher_round" />
+
+            <TextView
+                android:id="@+id/tv_issue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发布"
+                android:textColor="#888"
+                android:textSize="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/ll_shopping">
+
+            <Button
+                android:id="@+id/bt_shopping"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@mipmap/ic_launcher_round" />
+
+            <TextView
+                android:id="@+id/tv_shopping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="商城"
+                android:textColor="#888"
+                android:textSize="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/ll_myself">
+
+            <Button
+                android:id="@+id/bt_myself"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@mipmap/ic_launcher_round" />
+
+            <TextView
+                android:id="@+id/tv_myself"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的"
+                android:textColor="#888"
+                android:textSize="10dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

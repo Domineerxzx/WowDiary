@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WowDiary</string>
+    <string name="register_tip"><![CDATA[<<< 向右滑动进行登录]]></string>
+    <string name="login_tip"><![CDATA[向左滑动进行注册 >>>]]></string>
+
+    <string name="nicknameDefault">点击  登录/注册</string>
+    <string name="usernameDefault">暂无登录信息</string>
+</resources>
