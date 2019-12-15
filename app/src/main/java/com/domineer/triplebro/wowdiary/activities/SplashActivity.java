@@ -22,6 +22,8 @@ public class SplashActivity extends Activity implements View.OnClickListener {
     private DataInitController dataInitController;
     private SharedPreferences userInfo;
     private int user_id;
+    private SharedPreferences adminInfo;
+    private int admin_id;
     /*private AdPictureHandler adPictureHandler;
     private DataInitManager dataInitController;*/
 
@@ -43,6 +45,8 @@ public class SplashActivity extends Activity implements View.OnClickListener {
     private void initData() {
         userInfo = getSharedPreferences("userInfo", MODE_PRIVATE);
         user_id = userInfo.getInt("user_id", -1);
+        adminInfo = getSharedPreferences("adminInfo", MODE_PRIVATE);
+        admin_id = adminInfo.getInt("admin_id", -1);
         adPictureHandler = new AdPictureHandler(this, iv_ad);
         dataInitController = new DataInitController(this, adPictureHandler);
         adPictureHandler.setDataInitController(dataInitController);
@@ -61,7 +65,10 @@ public class SplashActivity extends Activity implements View.OnClickListener {
             case R.id.tv_skip:
                 adPictureHandler.setDataInitController(null);
                 unbindService(dataInitController);
-                if (user_id != -1) {
+                if(admin_id != -1){
+                    Intent main = new Intent(this, AdminManagerActivity.class);
+                    startActivity(main);
+                }else if (user_id != -1) {
                     Intent main = new Intent(this, MainActivity.class);
                     startActivity(main);
                 } else {

@@ -16,12 +16,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".activities.OrderActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name=".activities.AddLocationActivity"/>
+        <activity android:name=".activities.CreateOrderActivity" />
+        <activity android:name=".activities.LocationActivity" />
+        <activity android:name=".activities.GoodsDetailActivity" />
+        <activity android:name=".activities.OrderActivity" />
         <activity android:name=".activities.AboutUsActivity" />
         <activity android:name=".activities.CollectActivity" />
         <activity android:name=".activities.SettingActivity" />
-        <activity android:name=".activities.GoodDetailActivity" />
         <activity android:name=".activities.DeleteGoodActivity" />
         <activity android:name=".activities.AddGoodActivity" />
         <activity android:name=".activities.DairyDetailActivity" />
@@ -39,6 +41,7 @@
         <activity android:name=".activities.MainActivity" />
 
         <service android:name=".services.NetworkConnectionService" />
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.domineer.triplebro.wowdiary"

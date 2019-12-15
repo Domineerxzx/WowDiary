@@ -102,7 +102,7 @@ public class IssueFragment extends Fragment implements View.OnClickListener, OnI
     }
 
     @Override
-    public void onItemLongClick(View view) {
+    public void onItemLongClick(View view, int position) {
 
     }
 

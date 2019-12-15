@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_order_id_title"
+        android:textColor="@color/colorLine"
+        android:text="订单编号："
+        android:textSize="12dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_order_id"
+        android:textColor="@color/colorLine"
+        android:layout_toRightOf="@id/tv_order_id_title"
+        android:text="11111111111111"
+        android:textSize="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_location_title"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tv_order_id_title"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        android:text="收货地址"
+        android:textColor="@color/colorAppStyle"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:id="@+id/rl_location_select"
+        android:layout_below="@id/tv_location_title"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Domineer"
+            android:textSize="16dp" />
+
+
+        <TextView
+            android:id="@+id/tv_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_location"
+            android:layout_marginTop="5dp"
+            android:text="18811111111"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_mobile"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:text="大连外国语大学"
+            android:layout_marginRight="10dp"
+            android:maxLines="3"
+            android:gravity="center"
+            android:textSize="12dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_goods_title"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/rl_location_select"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        android:text="商品信息"
+        android:textColor="@color/colorAppStyle"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:id="@+id/rl_goods_info"
+        android:layout_below="@id/tv_goods_title"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/iv_goods"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_goods_name"
+            android:layout_toRightOf="@id/iv_goods"
+            android:layout_marginLeft="20dp"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:text="111111111111111111111"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_price"
+            android:layout_toRightOf="@id/iv_goods"
+            android:layout_below="@id/tv_goods_name"
+            android:layout_marginLeft="20dp"
+            android:textSize="18dp"
+            android:textColor="#FF0000"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:text="￥11111111111"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_over_order"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:text="确认收货"
+        android:background="@drawable/shape_user_button"
+        android:textColor="@color/colorWhite"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/rl_goods_info"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/tv_is_over"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:text="已完成"
+        android:background="@drawable/shape_alpha_card"
+        android:textColor="@color/colorWhite"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/rl_goods_info"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

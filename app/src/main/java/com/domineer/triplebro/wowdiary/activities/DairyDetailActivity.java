@@ -90,7 +90,7 @@ public class DairyDetailActivity extends Activity implements View.OnClickListene
     }
 
     @Override
-    public void onItemLongClick(View view) {
+    public void onItemLongClick(View view, int position) {
 
     }
 }

@@ -40,6 +40,12 @@ public class WowDiaryDataBase extends SQLiteOpenHelper {
 
         //商品表
         db.execSQL("create table goodsInfo(_id Integer primary key autoincrement,good_name varchar(200),good_price varchar(200),good_image varchar(200),admin_id Integer,FOREIGN KEY(admin_id) REFERENCES admianInfo(_id))");
+
+        //地址表
+        db.execSQL("create table locationInfo(_id Integer primary key autoincrement,location varchar(2000),name varchar(200),mobile varchar(20),user_id Integer,FOREIGN KEY (user_id) REFERENCES userInfo(_id))");
+
+        //订单表
+        db.execSQL("create table orderInfo(_id Integer primary key autoincrement,user_id Integer,goods_id Integer,location_id Integer,is_over Integer,FOREIGN KEY (user_id) REFERENCES userInfo(_id),FOREIGN KEY (goods_id) REFERENCES goodsInfo(_id),FOREIGN KEY (location_id) REFERENCES locationInfo(_id))");
     }
 
     @Override

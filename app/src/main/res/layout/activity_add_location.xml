@@ -10,7 +10,7 @@
         android:background="@color/colorWhite">
 
         <ImageView
-            android:id="@+id/iv_close_add_goods"
+            android:id="@+id/iv_close_add_location"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_alignBottom="@id/tv_title"
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:gravity="center"
-            android:text="添加商品"
+            android:text="增加收货地址"
             android:textColor="@color/colorBlack"
             android:textSize="16dp" />
 
@@ -33,19 +33,19 @@
             android:layout_alignParentBottom="true"
             android:background="@color/colorLine" />
     </RelativeLayout>
-
+    
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tv_name_title"
         android:textColor="@color/colorLine"
-        android:text="商品名称："
+        android:text="收货人姓名："
         android:textSize="12dp"
         android:layout_below="@id/rl_title"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp" />
-
+    
     <EditText
         android:id="@+id/et_name"
         android:layout_width="match_parent"
@@ -58,17 +58,17 @@
         android:textColor="@color/colorBlack"
         android:textSize="15dp"
         android:gravity="center_vertical"
-        android:hint="请输入商品名称"
+        android:hint="请输入收货人姓名"
         android:paddingLeft="10dp"
         android:textColorHint="@color/colorLine"/>
-
+    
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tv_price_title"
+        android:id="@+id/tv_location_title"
         android:textColor="@color/colorLine"
-        android:text="价格："
+        android:text="收货地址："
         android:textSize="12dp"
         android:layout_below="@id/et_name"
         android:layout_marginTop="10dp"
@@ -76,61 +76,51 @@
         android:layout_marginRight="20dp" />
 
     <EditText
-        android:id="@+id/et_price"
+        android:id="@+id/et_location"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/shape_user_edit"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_below="@id/tv_price_title"
+        android:layout_below="@id/tv_location_title"
         android:minHeight="80dp"
         android:layout_marginTop="10dp"
         android:textColor="@color/colorBlack"
         android:textSize="15dp"
         android:gravity="left"
         android:paddingTop="10dp"
-        android:hint="请输入价格"
+        android:hint="请输入收货地址"
         android:paddingLeft="10dp"
         android:textColorHint="@color/colorLine"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tv_image_title"
+        android:id="@+id/tv_mobile_title"
         android:textColor="@color/colorLine"
-        android:text="图片："
+        android:text="收货人联系电话："
         android:textSize="12dp"
-        android:layout_below="@id/et_price"
+        android:layout_below="@id/et_location"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp" />
 
-    <ImageView
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        android:id="@+id/iv_delete_goods_image_show"
-        android:background="@mipmap/close"
-        android:layout_alignTop="@id/iv_goods_image_show"
-        android:layout_alignRight="@id/iv_goods_image_show"/>
-
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:id="@+id/iv_goods_image_show"
-        android:layout_below="@id/tv_image_title"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"/>
-
-    <TextView
+    <EditText
+        android:id="@+id/et_mobile"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_goods_image_show"
-        android:text="上图为商品对外展示图片"
-        android:layout_below="@id/iv_goods_image_show"
-        android:gravity="center_horizontal"
-        android:textColor="@color/colorLine"
-        android:textSize="12dp"
-        android:layout_marginTop="5dp" />
+        android:layout_height="50dp"
+        android:background="@drawable/shape_user_edit"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/tv_mobile_title"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="15dp"
+        android:gravity="center_vertical"
+        android:hint="请输入收货人联系电话"
+        android:inputType="phone"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/colorLine"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -143,7 +133,7 @@
         android:layout_marginBottom="20dp"
         android:textColor="@color/colorWhite"
         android:textStyle="bold"
-        android:text="添 加 商 品"
+        android:text="添 加 地 址"
         android:gravity="center"/>
 
 </RelativeLayout>

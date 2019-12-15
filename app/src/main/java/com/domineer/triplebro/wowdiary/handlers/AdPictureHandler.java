@@ -8,6 +8,7 @@ import android.os.Message;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.domineer.triplebro.wowdiary.activities.AdminManagerActivity;
 import com.domineer.triplebro.wowdiary.activities.LoginOrRegisterActivity;
 import com.domineer.triplebro.wowdiary.activities.MainActivity;
 import com.domineer.triplebro.wowdiary.activities.SplashActivity;
@@ -37,13 +38,25 @@ public class AdPictureHandler extends Handler {
     public void handleMessage(Message msg) {
         SharedPreferences userInfo = context.getSharedPreferences("userInfo", Context.MODE_PRIVATE);
         int user_id = userInfo.getInt("user_id", -1);
+        SharedPreferences adminInfo = context.getSharedPreferences("adminInfo", Context.MODE_PRIVATE);
+        int admin_id = adminInfo.getInt("admin_id", -1);
         switch (msg.what) {
             case ProjectProperties.AD_PICTURE:
                 String adPicture = (String) msg.obj;
                 Glide.with(context).load(adPicture).into(iv_ad);
                 break;
             case ProjectProperties.SKIP:
-                if(user_id != -1){
+                if(admin_id != -1){
+                    if(dataInitController == null){
+                        break;
+                    }else{
+                        context.unbindService(dataInitController);
+                        Intent main = new Intent(context, AdminManagerActivity.class);
+                        context.startActivity(main);
+                        ((SplashActivity) context).finish();
+                        break;
+                    }
+                }else if(user_id != -1){
                     if(dataInitController == null){
                         break;
                     }else{

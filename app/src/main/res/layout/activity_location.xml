@@ -10,7 +10,7 @@
         android:background="@color/colorWhite">
 
         <ImageView
-            android:id="@+id/iv_close_order"
+            android:id="@+id/iv_close_location"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_alignBottom="@id/tv_title"
@@ -23,9 +23,19 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:gravity="center"
-            android:text="订单管理"
-            android:textColor="@color/colorBlack"
-            android:textSize="16dp" />
+            android:text="地址管理"
+            android:textSize="16dp"
+            android:textColor="@color/colorBlack"/>
+
+        <ImageView
+            android:id="@+id/iv_add_location"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@id/tv_title"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/add_location" />
+
 
         <View
             android:layout_width="match_parent"
@@ -37,9 +47,9 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/lv_order"
+        android:id="@+id/lv_location"
         android:layout_below="@id/rl_title"
-        android:padding="10dp"
-        android:scrollbars="none" />
+        android:scrollbars="none"
+        android:padding="10dp"/>
 
 </RelativeLayout>
