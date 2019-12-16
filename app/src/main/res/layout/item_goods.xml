@@ -9,9 +9,10 @@
 
     <ImageView
         android:id="@+id/iv_goods"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:background="@drawable/image_default" />
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"/>
 
     <TextView
         android:id="@+id/tv_goods_name"
@@ -31,7 +32,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_goods_name"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@id/iv_goods"
         android:text="￥"
         android:textColor="#ff0000"
         android:textSize="18dp"

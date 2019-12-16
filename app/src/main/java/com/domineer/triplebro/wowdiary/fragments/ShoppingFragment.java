@@ -67,9 +67,16 @@ public class ShoppingFragment extends Fragment implements OnItemClickListener {
         goodInfoList = shoppingController.getGoodsInfoList();
         shoppingAdapter = new ShoppingAdapter(getActivity(), goodInfoList);
         bannerImageList = new ArrayList<String>();
-        for (int i = 0; i < 5; i++) {
-            String image = goodInfoList.get(i).getImage();
-            bannerImageList.add(image);
+        if(goodInfoList.size() <= 5){
+            for (int i = 0; i < goodInfoList.size(); i++) {
+                String image = goodInfoList.get(i).getImage();
+                bannerImageList.add(image);
+            }
+        }else{
+            for (int i = 0; i < 5; i++) {
+                String image = goodInfoList.get(i).getImage();
+                bannerImageList.add(image);
+            }
         }
         bn_banner.setImages(bannerImageList);
         bn_banner.start();
@@ -81,6 +88,7 @@ public class ShoppingFragment extends Fragment implements OnItemClickListener {
                 startActivity(intent);
             }
         });
+        rv_shopping.setAdapter(shoppingAdapter);
     }
 
     private void setOnClickListener() {

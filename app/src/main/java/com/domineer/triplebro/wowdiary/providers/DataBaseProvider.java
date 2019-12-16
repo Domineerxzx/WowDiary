@@ -187,8 +187,8 @@ public class DataBaseProvider implements DataProvider {
         SQLiteDatabase db = wowDiaryDataBase.getWritableDatabase();
         List<String> imageList = new ArrayList<>();
         Cursor dairyImageInfoCursor = db.query("dairyImageInfo", null, "dairy_id = ?", new String[]{String.valueOf(dairy_id)}, null, null, null);
-        if(dairyImageInfoCursor!=null && dairyImageInfoCursor.getCount()>0){
-            while (dairyImageInfoCursor.moveToNext()){
+        if (dairyImageInfoCursor != null && dairyImageInfoCursor.getCount() > 0) {
+            while (dairyImageInfoCursor.moveToNext()) {
                 imageList.add(dairyImageInfoCursor.getString(1));
             }
         }
@@ -203,13 +203,13 @@ public class DataBaseProvider implements DataProvider {
         SQLiteDatabase db = wowDiaryDataBase.getWritableDatabase();
         Cursor goodsInfoCursor = db.query("goodsInfo", null, null, null, null, null, null);
         List<GoodsInfo> goodsInfoList = new ArrayList<>();
-        if(goodsInfoCursor!= null && goodsInfoCursor.getCount()>0){
-            while (goodsInfoCursor.moveToNext()){
+        if (goodsInfoCursor != null && goodsInfoCursor.getCount() > 0) {
+            while (goodsInfoCursor.moveToNext()) {
                 GoodsInfo goodsInfo = new GoodsInfo();
                 goodsInfo.set_id(goodsInfoCursor.getInt(0));
                 goodsInfo.setName(goodsInfoCursor.getString(1));
-                goodsInfo.setImage(goodsInfoCursor.getString(2));
-                goodsInfo.setPrice(goodsInfoCursor.getString(3));
+                goodsInfo.setPrice(goodsInfoCursor.getString(2));
+                goodsInfo.setImage(goodsInfoCursor.getString(3));
                 goodsInfo.setAdmin_id(goodsInfoCursor.getInt(4));
                 goodsInfoList.add(goodsInfo);
             }
@@ -225,8 +225,8 @@ public class DataBaseProvider implements DataProvider {
         SQLiteDatabase db = wowDiaryDataBase.getWritableDatabase();
         Cursor locationInfoCursor = db.query("locationInfo", null, "user_id = ?", new String[]{String.valueOf(user_id)}, null, null, null);
         List<LocationInfo> locationInfoList = new ArrayList<>();
-        if(locationInfoCursor!= null && locationInfoCursor.getCount()>0){
-            while (locationInfoCursor.moveToNext()){
+        if (locationInfoCursor != null && locationInfoCursor.getCount() > 0) {
+            while (locationInfoCursor.moveToNext()) {
                 LocationInfo locationInfo = new LocationInfo();
                 locationInfo.set_id(locationInfoCursor.getInt(0));
                 locationInfo.setLocation(locationInfoCursor.getString(1));
@@ -245,29 +245,30 @@ public class DataBaseProvider implements DataProvider {
 
     public void deleteLocationInfo(int location_id) {
         SQLiteDatabase db = wowDiaryDataBase.getWritableDatabase();
-        db.delete("locationInfo","_id =?",new String[]{String.valueOf(location_id)});
+        db.delete("orderInfo", "location_id = ?", new String[]{String.valueOf(location_id)});
+        db.delete("locationInfo", "_id = ?", new String[]{String.valueOf(location_id)});
         db.close();
     }
 
     public void addLocationInfo(String name, String mobile, String location, int user_id) {
         SQLiteDatabase db = wowDiaryDataBase.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("name",name);
-        contentValues.put("mobile",mobile);
-        contentValues.put("location",location);
-        contentValues.put("user_id",user_id);
-        db.insert("locationInfo",null, contentValues);
+        contentValues.put("name", name);
+        contentValues.put("mobile", mobile);
+        contentValues.put("location", location);
+        contentValues.put("user_id", user_id);
+        db.insert("locationInfo", null, contentValues);
         db.close();
     }
 
     public void addOrderInfo(int user_id, int goods_id, int location_id) {
         SQLiteDatabase db = wowDiaryDataBase.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("user_id",user_id);
-        contentValues.put("goods_id",goods_id);
-        contentValues.put("location_id",location_id);
-        contentValues.put("is_over",0);
-        db.insert("orderInfo",null, contentValues);
+        contentValues.put("user_id", user_id);
+        contentValues.put("goods_id", goods_id);
+        contentValues.put("location_id", location_id);
+        contentValues.put("is_over", 0);
+        db.insert("orderInfo", null, contentValues);
         db.close();
     }
 
@@ -275,8 +276,8 @@ public class DataBaseProvider implements DataProvider {
         SQLiteDatabase db = wowDiaryDataBase.getWritableDatabase();
         Cursor orderInfoCursor = db.query("orderInfo", null, "user_id = ?", new String[]{String.valueOf(user_id)}, null, null, null);
         List<OrderInfo> orderInfoList = new ArrayList<>();
-        if(orderInfoCursor!= null && orderInfoCursor.getCount()>0){
-            while (orderInfoCursor.moveToNext()){
+        if (orderInfoCursor != null && orderInfoCursor.getCount() > 0) {
+            while (orderInfoCursor.moveToNext()) {
                 OrderInfo orderInfo = new OrderInfo();
                 orderInfo.set_id(orderInfoCursor.getInt(0));
                 orderInfo.setUser_id(orderInfoCursor.getInt(1));
@@ -295,19 +296,19 @@ public class DataBaseProvider implements DataProvider {
     public void updateOrderIsOver(int order_id) {
         SQLiteDatabase db = wowDiaryDataBase.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("is_over",1);
-        db.update("orderInfo", contentValues,"_id = ?",new String[]{String.valueOf(order_id)});
+        contentValues.put("is_over", 1);
+        db.update("orderInfo", contentValues, "_id = ?", new String[]{String.valueOf(order_id)});
         db.close();
     }
 
     public void addGoodsInfo(String name, String price, String image_show, int admin_id) {
         SQLiteDatabase db = wowDiaryDataBase.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("good_name",name);
-        contentValues.put("good_price",price);
-        contentValues.put("good_image",image_show);
-        contentValues.put("admin_id",admin_id);
-        db.insert("goodsInfo",null, contentValues);
+        contentValues.put("good_name", name);
+        contentValues.put("good_price", price);
+        contentValues.put("good_image", image_show);
+        contentValues.put("admin_id", admin_id);
+        db.insert("goodsInfo", null, contentValues);
         db.close();
     }
 
@@ -315,13 +316,13 @@ public class DataBaseProvider implements DataProvider {
         SQLiteDatabase db = wowDiaryDataBase.getWritableDatabase();
         Cursor goodsInfoCursor = db.query("goodsInfo", null, "admin_id = ?", new String[]{String.valueOf(admin_id)}, null, null, null);
         List<GoodsInfo> goodsInfoList = new ArrayList<>();
-        if(goodsInfoCursor!= null && goodsInfoCursor.getCount()>0){
-            while (goodsInfoCursor.moveToNext()){
+        if (goodsInfoCursor != null && goodsInfoCursor.getCount() > 0) {
+            while (goodsInfoCursor.moveToNext()) {
                 GoodsInfo goodsInfo = new GoodsInfo();
                 goodsInfo.set_id(goodsInfoCursor.getInt(0));
                 goodsInfo.setName(goodsInfoCursor.getString(1));
-                goodsInfo.setImage(goodsInfoCursor.getString(2));
-                goodsInfo.setPrice(goodsInfoCursor.getString(3));
+                goodsInfo.setPrice(goodsInfoCursor.getString(2));
+                goodsInfo.setImage(goodsInfoCursor.getString(3));
                 goodsInfo.setAdmin_id(goodsInfoCursor.getInt(4));
                 goodsInfoList.add(goodsInfo);
             }
@@ -335,7 +336,8 @@ public class DataBaseProvider implements DataProvider {
 
     public void deleteGoodsInfoById(int goods_id) {
         SQLiteDatabase db = wowDiaryDataBase.getWritableDatabase();
-        db.delete("goodsInfo","_id = ?",new String[]{String.valueOf(goods_id)});
+        db.delete("orderInfo", "goods_id = ?", new String[]{String.valueOf(goods_id)});
+        db.delete("goodsInfo", "_id = ?", new String[]{String.valueOf(goods_id)});
         db.close();
     }
 }

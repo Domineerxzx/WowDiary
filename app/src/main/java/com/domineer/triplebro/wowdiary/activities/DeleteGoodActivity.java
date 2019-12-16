@@ -47,7 +47,7 @@ public class DeleteGoodActivity extends Activity implements View.OnClickListener
 
     private void initData() {
         adminInfo = getSharedPreferences("adminInfo", MODE_PRIVATE);
-        admin_id = adminInfo.getInt("admin_id", -1);
+        admin_id = adminInfo.getInt("user_id", -1);
         adminController = new AdminController(this);
         goodsInfoList = adminController.getGoodsInfoListByAdminId(admin_id);
         shoppingAdapter = new ShoppingAdapter(this, goodsInfoList);
@@ -71,7 +71,7 @@ public class DeleteGoodActivity extends Activity implements View.OnClickListener
     @Override
     public void onItemClick(View view, final int position) {
         TwoButtonDialog twoButtonDialog = new TwoButtonDialog();
-        twoButtonDialog.show("删除商品", "是否删除此商品？", new DialogInterface.OnClickListener() {
+        twoButtonDialog.show("删除商品", "是否删除此商品？(提示：删除商品信息会将对应的订单信息一并删除，请谨慎处理。)", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 GoodsInfo removeGoodsInfo = goodsInfoList.remove(position);

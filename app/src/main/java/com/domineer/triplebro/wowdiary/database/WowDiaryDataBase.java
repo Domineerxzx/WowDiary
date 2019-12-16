@@ -39,7 +39,7 @@ public class WowDiaryDataBase extends SQLiteOpenHelper {
         db.execSQL("create table collectInfo(_id Integer primary key autoincrement,dairy_id Integer,user_id Integer,FOREIGN KEY (user_id) REFERENCES userInfo(_id),FOREIGN KEY (dairy_id) REFERENCES dairyInfo(_id))");
 
         //商品表
-        db.execSQL("create table goodsInfo(_id Integer primary key autoincrement,good_name varchar(200),good_price varchar(200),good_image varchar(200),admin_id Integer,FOREIGN KEY(admin_id) REFERENCES admianInfo(_id))");
+        db.execSQL("create table goodsInfo(_id Integer primary key autoincrement,good_name varchar(200),good_price varchar(200),good_image varchar(200),admin_id Integer,FOREIGN KEY(admin_id) REFERENCES adminInfo(_id))");
 
         //地址表
         db.execSQL("create table locationInfo(_id Integer primary key autoincrement,location varchar(2000),name varchar(200),mobile varchar(20),user_id Integer,FOREIGN KEY (user_id) REFERENCES userInfo(_id))");

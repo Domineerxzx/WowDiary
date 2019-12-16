@@ -63,7 +63,6 @@
             android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Domineer"
             android:textSize="16dp" />
 
 
@@ -73,7 +72,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_location"
             android:layout_marginTop="5dp"
-            android:text="18811111111"
             android:textSize="12dp" />
 
         <TextView
@@ -83,7 +81,6 @@
             android:layout_toRightOf="@id/tv_mobile"
             android:layout_marginLeft="20dp"
             android:layout_centerVertical="true"
-            android:text="大连外国语大学"
             android:layout_toLeftOf="@id/iv_select_location"
             android:layout_marginRight="10dp"
             android:maxLines="3"

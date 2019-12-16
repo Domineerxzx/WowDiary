@@ -60,7 +60,7 @@ public class AddGoodActivity extends Activity implements View.OnClickListener {
 
     private void initData() {
         adminInfo = getSharedPreferences("adminInfo", MODE_PRIVATE);
-        admin_id = adminInfo.getInt("admin_id", -1);
+        admin_id = adminInfo.getInt("user_id", -1);
         phone_number = adminInfo.getString("phone_number", "");
         Glide.with(this).load(R.drawable.submit).into(iv_goods_image_show);
         image_show = "";

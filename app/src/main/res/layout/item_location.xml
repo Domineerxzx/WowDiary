@@ -10,7 +10,6 @@
             android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Domineer"
             android:textSize="16dp" />
 
         <TextView
@@ -19,7 +18,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_name"
             android:layout_marginTop="10dp"
-            android:text="大连外国语大学"
             android:textSize="12dp" />
 
         <TextView
@@ -28,7 +26,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_location"
             android:layout_marginTop="5dp"
-            android:text="18811111111"
             android:textSize="12dp" />
 
 </RelativeLayout>

@@ -34,7 +34,9 @@ public class OrderAdapter extends BaseAdapter {
         this.context = context;
         this.orderInfoList = orderInfoList;
         dataBaseProvider = new DataBaseProvider(context);
-        locationInfoList = dataBaseProvider.getLocationInfo(orderInfoList.get(0).getUser_id());
+        if (orderInfoList.size() != 0) {
+            locationInfoList = dataBaseProvider.getLocationInfo(orderInfoList.get(0).getUser_id());
+        }
         goodsInfoList = dataBaseProvider.getGoodsInfoList();
     }
 
@@ -82,7 +84,7 @@ public class OrderAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) convertView.getTag();
         }
         for (LocationInfo locationInfo : locationInfoList) {
-            if(locationInfo.get_id() == orderInfoList.get(position).getLocation_id()){
+            if (locationInfo.get_id() == orderInfoList.get(position).getLocation_id()) {
                 viewHolder.tv_name.setText(locationInfo.getName());
                 viewHolder.tv_location.setText(locationInfo.getLocation());
                 viewHolder.tv_mobile.setText(locationInfo.getMobile());
@@ -90,21 +92,21 @@ public class OrderAdapter extends BaseAdapter {
             }
         }
         for (GoodsInfo goodsInfo : goodsInfoList) {
-            if(goodsInfo.get_id() == orderInfoList.get(position).getGoods_id()){
+            if (goodsInfo.get_id() == orderInfoList.get(position).getGoods_id()) {
                 viewHolder.tv_goods_name.setText(goodsInfo.getName());
                 viewHolder.tv_price.setText(goodsInfo.getPrice());
-                if(goodsInfo.getImage() != null && goodsInfo.getImage().length()>0){
+                if (goodsInfo.getImage() != null && goodsInfo.getImage().length() > 0) {
                     Glide.with(context).load(goodsInfo.getImage()).into(viewHolder.iv_goods);
-                }else{
+                } else {
                     Glide.with(context).load(R.drawable.image_default).into(viewHolder.iv_goods);
                 }
                 break;
             }
         }
-        if(orderInfoList.get(position).getIs_over() == 0) {
+        if (orderInfoList.get(position).getIs_over() == 0) {
             viewHolder.tv_is_over.setVisibility(View.GONE);
             viewHolder.tv_over_order.setVisibility(View.VISIBLE);
-        }else{
+        } else {
             viewHolder.tv_is_over.setVisibility(View.VISIBLE);
             viewHolder.tv_over_order.setVisibility(View.GONE);
         }

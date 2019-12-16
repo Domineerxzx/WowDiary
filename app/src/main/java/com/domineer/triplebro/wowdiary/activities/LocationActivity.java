@@ -40,6 +40,13 @@ public class LocationActivity extends Activity implements View.OnClickListener, 
         setOnClickListener();
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        locationInfoList = locationController.getLocationInfo(user_id);
+        locationAdapter.setLocationInfoList(locationInfoList);
+    }
+
     private void initView() {
         iv_close_location = (ImageView) findViewById(R.id.iv_close_location);
         iv_add_location = (ImageView) findViewById(R.id.iv_add_location);
@@ -89,7 +96,7 @@ public class LocationActivity extends Activity implements View.OnClickListener, 
     @Override
     public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
         TwoButtonDialog twoButtonDialog = new TwoButtonDialog();
-        twoButtonDialog.show("删除地址信息", "是否要删除此条地址信息？", new DialogInterface.OnClickListener() {
+        twoButtonDialog.show("删除地址信息", "是否要删除此条地址信息？(提示：删除地址信息会将对应的订单信息一并删除，请谨慎处理。)", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 LocationInfo removeLocation = locationInfoList.remove(position);

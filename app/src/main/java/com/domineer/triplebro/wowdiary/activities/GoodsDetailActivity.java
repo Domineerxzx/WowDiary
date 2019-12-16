@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.domineer.triplebro.wowdiary.R;
 import com.domineer.triplebro.wowdiary.adapters.ShoppingAdapter;
 import com.domineer.triplebro.wowdiary.controllers.GoodsController;
@@ -71,6 +72,11 @@ public class GoodsDetailActivity extends Activity implements View.OnClickListene
         tv_price.setText("￥"+goodsDetail.getPrice());
         shoppingAdapter = new ShoppingAdapter(this, goodsInfoList);
         rv_shopping.setAdapter(shoppingAdapter);
+        if(goodsDetail.getImage()!= null && goodsDetail.getImage().length()>0){
+            Glide.with(this).load(goodsDetail.getImage()).into(iv_goods);
+        }else{
+            Glide.with(this).load(R.drawable.image_default).into(iv_goods);
+        }
     }
 
     private void setOnClickListener() {
